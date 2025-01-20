@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--white);
+  overflow-x: hidden;
+  height: auto;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 300px);
+  padding-bottom: 5rem;
+  overflow: hidden;
+  height: auto;
+}
+
+.footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}

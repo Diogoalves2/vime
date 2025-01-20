@@ -1,0 +1,294 @@
+.page-institucional {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    background-color: #FAFAFA;
+
+    .container {
+        max-width: 94.8rem;
+        margin: 0 auto;
+
+        .title-page {
+            margin-bottom: 6rem;
+            position: relative;
+            
+            &::after {
+                content: '';
+                width: 8rem;
+                height: 4px;
+                background-color: var(--soft-gold);
+                position: absolute;
+                bottom: -2rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            h1 {
+                color: var(--black-blue);
+                font-size: 4rem;
+                font-weight: 700;
+                text-align: center;
+                line-height: 120%;
+            }
+        }
+
+        .content-page {
+            background-color: #fff;
+            padding: 4.8rem;
+            border-radius: 2.4rem;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+
+            h2,
+            .wp-block-heading h2,
+            .wp-block-heading.is-style-h2,
+            h2.wp-block-heading {
+                color: var(--black-blue);
+                font-size: 3.2rem;
+                font-weight: 600;
+                margin-bottom: 3.2rem;
+                margin-top: 6rem;
+                padding-bottom: 1.6rem;
+                border-bottom: 2px solid rgba(128, 149, 202, 0.15);
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+            h3,
+            .wp-block-heading h3,
+            .wp-block-heading.is-style-h3,
+            h3.wp-block-heading {
+                color: var(--black-blue);
+                font-size: 2.4rem;
+                font-weight: 600;
+                margin-bottom: 2.4rem;
+                margin-top: 4rem;
+            }
+
+            h4,
+            .wp-block-heading h4,
+            .wp-block-heading.is-style-h4,
+            h4.wp-block-heading {
+                color: var(--black-blue);
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 2rem;
+                margin-top: 3.2rem;
+            }
+
+            p,
+            .wp-block-paragraph {
+                color: rgba(10, 14, 24, 0.8);
+                font-size: 1.8rem;
+                line-height: 170%;
+                margin-bottom: 2.4rem;
+                letter-spacing: -0.02em;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            ul,
+            ol,
+            .wp-block-list {
+                margin: 3.2rem 0;
+                padding-left: 0;
+                list-style: none;
+
+                li {
+                    color: rgba(10, 14, 24, 0.8);
+                    font-size: 1.8rem;
+                    line-height: 170%;
+                    margin-bottom: 2rem;
+                    padding-left: 3.2rem;
+                    position: relative;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &::before {
+                        content: '';
+                        width: 0.8rem;
+                        height: 0.8rem;
+                        background-color: var(--soft-gold);
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: 1.2rem;
+                    }
+                }
+            }
+
+            ol {
+                counter-reset: item;
+                
+                li {
+                    counter-increment: item;
+                    
+                    &::before {
+                        content: counter(item) ".";
+                        background-color: transparent;
+                        color: var(--soft-gold);
+                        font-weight: 600;
+                        font-size: 2rem;
+                        width: auto;
+                        height: auto;
+                        position: absolute;
+                        left: 0;
+                        top: -0.2rem;
+                    }
+                }
+            }
+
+            a {
+                color: var(--navy-Blue);
+                text-decoration: underline;
+                font-weight: 500;
+                transition: all .3s ease;
+
+                &:hover {
+                    color: var(--soft-gold);
+                    text-decoration-thickness: 2px;
+                }
+            }
+
+            strong {
+                font-weight: 600;
+                color: var(--black-blue);
+            }
+
+            blockquote {
+                background-color: rgba(128, 149, 202, 0.1);
+                border-left: 4px solid var(--navy-Blue);
+                padding: 2.4rem;
+                margin: 3.2rem 0;
+                border-radius: 0 1.2rem 1.2rem 0;
+
+                p {
+                    margin-bottom: 0;
+                    font-style: italic;
+                }
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 3.2rem 0;
+
+                th, td {
+                    padding: 1.6rem;
+                    border: 1px solid rgba(128, 149, 202, 0.2);
+                    text-align: left;
+                    font-size: 1.6rem;
+                }
+
+                th {
+                    background-color: rgba(128, 149, 202, 0.1);
+                    font-weight: 600;
+                    color: var(--black-blue);
+                }
+            }
+        }
+    }
+
+    @media(max-width: 991px) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        .container {
+            .title-page {
+                margin-bottom: 4rem;
+                
+                h1 {
+                    font-size: 3.2rem;
+                }
+            }
+
+            .content-page {
+                padding: 3.2rem;
+
+                h2,
+                .wp-block-heading h2,
+                .wp-block-heading.is-style-h2,
+                h2.wp-block-heading {
+                    font-size: 2.8rem;
+                }
+
+                h3,
+                .wp-block-heading h3,
+                .wp-block-heading.is-style-h3,
+                h3.wp-block-heading {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 480px) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        .container {
+            .title-page {
+                margin-bottom: 3.2rem;
+                
+                h1 {
+                    font-size: 2.8rem;
+                }
+
+                &::after {
+                    width: 6rem;
+                }
+            }
+
+            .content-page {
+                padding: 2.4rem;
+                border-radius: 1.6rem;
+
+                h2,
+                .wp-block-heading h2,
+                .wp-block-heading.is-style-h2,
+                h2.wp-block-heading {
+                    font-size: 2.4rem;
+                    margin-top: 4rem;
+                    margin-bottom: 2.4rem;
+                }
+
+                h3,
+                .wp-block-heading h3,
+                .wp-block-heading.is-style-h3,
+                h3.wp-block-heading {
+                    font-size: 2rem;
+                    margin-top: 3.2rem;
+                    margin-bottom: 1.6rem;
+                }
+
+                p,
+                .wp-block-paragraph,
+                ul li,
+                ol li,
+                .wp-block-list li {
+                    font-size: 1.6rem;
+                    line-height: 160%;
+                }
+
+                ul,
+                ol {
+                    margin: 2.4rem 0;
+
+                    li {
+                        padding-left: 2.4rem;
+                        margin-bottom: 1.6rem;
+                    }
+                }
+
+                blockquote {
+                    padding: 1.6rem;
+                    margin: 2.4rem 0;
+                }
+            }
+        }
+    }
+} 

@@ -1,0 +1,344 @@
+main{
+    .breadcrumb-archive {
+        background-color: rgba(128, 149, 202, 0.10);
+        padding: 2.5rem 0;
+        border-bottom: 1px solid rgba(128, 149, 202, 0.15);
+        
+        .container {
+            ul {
+                display: flex;
+                align-items: center;
+                li {
+                    display: flex;
+                    align-items: center;
+                    color: var(--black-blue);
+                    font-size: 1.4rem;
+                    font-weight: 500;
+    
+                    &:not(:last-child) {
+                        a {
+                            color: #8095CA;
+                            transition: color 0.3s ease;
+                            
+                            &:hover {
+                                color: var(--soft-gold);
+                            }
+                        }
+    
+                        &::after {
+                            content: "";
+                            display: inline-block;
+                            width: 6px;
+                            height: 6px;
+                            border-top: 2px solid #8095CA;
+                            border-right: 2px solid #8095CA;
+                            transform: rotate(45deg);
+                            margin: 0 1.2rem;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .archive-products {
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    
+        .container {
+            .title-archive {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 4rem;
+                h1 {
+                    color: var(--black-blue);
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    margin-bottom: 1.6rem;
+                }
+                .products-count {
+                    span {
+                        color: rgba(10, 14, 24, 0.70);
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+    
+            .archive-wrapper {
+                display: flex;
+                gap: 4rem;
+    
+                // Sidebar com filtros
+                .archive-filters {
+                    width: 28rem;
+                    flex-shrink: 0;
+    
+                    .filter-section {
+                        background-color: #fff;
+                        border-radius: 1.6rem;
+                        padding: 2.4rem;
+                        border: 1px solid rgba(128, 149, 202, 0.15);
+                        margin-bottom: 2rem;
+    
+                        h3 {
+                            color: var(--black-blue);
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                            margin-bottom: 2rem;
+                        }
+    
+                        .filter-group {
+                            label{
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                                color: var(--black-blue);
+                            }
+                            .filter-checkbox {
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 1.2rem;
+                                cursor: pointer;
+                                
+                                input[type="checkbox"] {
+                                    margin-right: 1rem;
+                                }
+                                                              
+                                .count {
+                                    margin-left: auto;
+                                    color: #8095CA;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+    
+                        .price-range {
+                            margin-bottom: 2rem;
+                            
+                            input[type="range"] {
+                                width: 100%;
+                                height: 2px;
+                                background: rgba(128, 149, 202, 0.3);
+                                border-radius: 5px;
+                                outline: none;
+                                padding: 0;
+                                margin: 0;
+                                cursor: pointer;
+
+                                &::-webkit-slider-thumb {
+                                    -webkit-appearance: none;
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 50%;
+                                    background: var(--soft-gold);
+                                    cursor: pointer;
+                                    transition: all .3s ease-in-out;
+                                    
+                                    &:hover {
+                                        background: var(--navy-Blue);
+                                        transform: scale(1.1);
+                                    }
+                                }
+
+                                &::-moz-range-thumb {
+                                    width: 20px;
+                                    height: 20px;
+                                    border: 0;
+                                    border-radius: 50%;
+                                    background: var(--soft-gold);
+                                    cursor: pointer;
+                                    transition: all .3s ease-in-out;
+                                    
+                                    &:hover {
+                                        background: var(--navy-Blue);
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+
+                            .price-values {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 1rem;
+                                
+                                span {
+                                    color: var(--black-blue);
+                                    font-size: 1.4rem;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+    
+                        .apply-filters {
+                            width: 100%;
+                            background-color: var(--navy-Blue);
+                            color: white;
+                            padding: 1.2rem;
+                            border: none;
+                            border-radius: .8rem;
+                            cursor: pointer;
+                            transition: all .3s ease;
+    
+                            &:hover {
+                                background-color: var(--soft-gold);
+                            }
+                        }
+                    }
+                }
+    
+                // Lista de produtos
+                .archive-main {
+                    flex: 1;
+                    .products {
+                        ul {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 3.2rem;
+    
+                            li {
+                                .card-product {
+                                    border-radius: 1.6rem;
+                                    overflow: hidden;
+                                    display: block;
+                                    
+                                    .image {
+                                        width: 100%;
+                                        height: 30rem;
+                                        overflow: hidden;
+                                        border-radius: 1.6rem;
+                                        margin-bottom: 1.6rem;
+                                        
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            transition: transform .3s ease;
+                                        }
+                                    }
+    
+                                    .info {
+                                        h3 {
+                                            color: var(--black-blue);
+                                            font-size: 2rem;
+                                            font-weight: 600;
+                                            margin-bottom: .6rem;
+                                        }
+    
+                                        .price {
+                                            color: var(--navy-Blue);
+                                            font-size: 1.8rem;
+                                            font-weight: 600;
+                                            margin-bottom: 1.6rem;
+                                        }
+    
+                                        p {
+                                            color: rgba(10, 14, 24, 0.70);
+                                            font-size: 1.4rem;
+                                            line-height: 150%;
+                                        }
+                                    }
+    
+                                    &:hover {
+                                        .image img {
+                                            transform: scale(1.05);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Adicionar um wrapper para a paginação
+            .pagination-wrapper {
+                width: 100%;
+                margin-top: 6rem;
+                
+                nav.navigation.pagination { // Especificidade para sobrescrever estilos do WordPress
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    .nav-links {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 1rem;
+                    }
+                }
+
+                .page-numbers {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 4.8rem;
+                    height: 4.8rem;
+                    padding: 0 1rem;
+                    border-radius: .8rem;
+                    background-color: #f5f5f5;
+                    color: var(--black-blue);
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    transition: all .3s ease;
+                    
+                    &:hover {
+                        background-color: var(--soft-gold);
+                        color: #fff;
+                    }
+                    
+                    &.current {
+                        background-color: var(--navy-Blue);
+                        color: #fff;
+                    }
+                    
+                    &.prev, &.next {
+                        svg {
+                            width: 2.4rem;
+                            height: 2.4rem;
+                        }
+                    }
+                    
+                    &.prev:hover {
+                        transform: translateX(-4px);
+                    }
+                    
+                    &.next:hover {
+                        transform: translateX(4px);
+                    }
+                }
+            }
+        }
+    
+        // Responsivo
+        @media(max-width: 1200px) {
+            .container .archive-wrapper .archive-main .products ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    
+        @media(max-width: 991px) {
+            .container .archive-wrapper {
+                flex-direction: column;
+                
+                .archive-filters {
+                    width: 100%;
+                    margin-bottom: 4rem;
+                }
+            }
+
+            .pagination-wrapper {
+                margin-left: 0;
+                padding-right: 0;
+            }
+        }
+    
+        @media(max-width: 480px) {
+            .container .archive-wrapper .archive-main .products ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+

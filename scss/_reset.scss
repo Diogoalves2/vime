@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style-type: none;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'exo 2', sans-serif;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'exo 2', sans-serif;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--gray-scale-01);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: var(--white);
+  }
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  p, span{
+    line-height: 140%;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  input{
+    font-family: 'exo 2', sans-serif;
+  }
+  
